@@ -1,6 +1,6 @@
 ---
 - name: Install Docker and Deploy Image
-  hosts: vms
+  hosts: centos
   become: yes
   tasks:
     - name: Install required packages
