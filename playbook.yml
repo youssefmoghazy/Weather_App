@@ -26,10 +26,12 @@
       community.docker.docker_image:
         name: "youssefmoghazy/python-app-image:latest"
         source: pull
-
     - name: Run Docker container
       community.docker.docker_container:
         name: weather-app
         image: "youssefmoghazy/python-app-image:latest"
         state: started
         restart_policy: always
+        published_ports:
+          - "5000:5000"
+

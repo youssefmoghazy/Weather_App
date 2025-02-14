@@ -2,8 +2,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "python-app-image"
-        CONTAINER_NAME = "python-app-container"
+        IMAGE_NAME = "youssefmoghazy/python-app-image"
     }
 
     stages {
@@ -22,21 +21,32 @@ pipeline {
                 }
             }
         }
-
-        stage('Run Container') {
-            steps {
-                script {
-                    sh 'docker run -d --name $CONTAINER_NAME -p 5000:5000 $IMAGE_NAME'
+        stage('push image to docker hub'){
+            steps{
+                script{
+                    sh 'docker push $IMAGE_NAME'
                 }
             }
         }
-    }
-
-    post {
-        always {
-            script {
-                sh 'docker ps -a | grep $CONTAINER_NAME'
+        stage('list'){
+            steps{
+                script{
+                    sh 'ls'
+                }
             }
         }
+        stage('Run ansible playbook'){
+            steps{
+                script{
+                    sh 'export ANSIBLE_HOST_KEY_CHECKING=False'
+                    sh 'chmod 600 ./privatefiles/private_key_m01'
+                    sh 'chmod 600 ./privatefiles/private_key_m02'
+                    sh 'ansible-playbook -i inventory playbook.yml'
+                }
+            }
+        }
+        
     }
+    
+    
 }
