@@ -1,3 +1,3 @@
 [centos]
-192.168.56.15 ansible_user=vagrant ansible_private_key_file=/home/youssef/courses/ODC_DevOps/Weather_App/privatefiles/private_key_m01
-192.168.56.14 ansible_user=vagrant ansible_private_key_file=/home/youssef/courses/ODC_DevOps/Weather_App/privatefiles/private_key_m02
+192.168.56.15 ansible_user=vagrant ansible_private_key_file=./privatefiles/private_key_m01
+192.168.56.14 ansible_user=vagrant ansible_private_key_file=./privatefiles/private_key_m02
