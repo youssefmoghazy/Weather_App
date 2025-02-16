@@ -79,5 +79,10 @@ Provide the required credentials in Jenkins to enable GitHub access.
 ### Step 12: Access the Application:
    - The application should now be accessible at `http://192.168.56.15:5000/` or `http://192.168.56.14:5000/`.
 
+![Weather App Screenshot](https://github.com/youssefmoghazy/Weather_App/issues/1#issue-2856237032)
+
+
 ## Done 🎉
 The pipeline should now be set up and running successfully!
+
+
