@@ -1,5 +1,0 @@
-# Ignore environment variables file
-.env
-
-# Ignore private files directory
-privatefiles/
