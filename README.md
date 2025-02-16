@@ -1,6 +1,8 @@
 # Weather App - Deployment Guide
 
 This guide provides step-by-step instructions to set up and deploy the Weather App using Vagrant, VirtualBox, Ansible, and Jenkins.
+## Visulaiztion 
+![Image](https://github.com/user-attachments/assets/2fa87466-645d-4056-84d4-31c65b34fbb7)
 
 ## Prerequisites
 
@@ -79,7 +81,7 @@ Provide the required credentials in Jenkins to enable GitHub access.
 ### Step 12: Access the Application:
    - The application should now be accessible at `http://192.168.56.15:5000/` or `http://192.168.56.14:5000/`.
 
-![Weather App Screenshot](https://github.com/youssefmoghazy/Weather_App/issues/1#issue-2856237032)
+![Weather App Screenshot](https://github.com/user-attachments/assets/ef75a7b7-78e5-446f-be78-e9cfa1cd5509)
 
 
 ## Done 🎉
